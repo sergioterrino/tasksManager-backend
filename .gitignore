@@ -1,0 +1,66 @@
+# Dependencias
+/node_modules
+/package-lock.json
+/yarn.lock
+
+# Archivos de entorno
+/.env
+/.env.local
+/.env.development.local
+/.env.test.local
+/.env.production.local
+
+# Directorios de logs
+/logs
+*.log
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+
+# Directorio de salida de compilación
+/dist
+/build
+
+# Directorios de caché
+/.cache
+/.parcel-cache
+
+# Otros archivos y directorios
+.DS_Store
+/.pnp
+.pnp.js
+/coverage
+/.nyc_output
+
+# Archivos de configuración del editor
+.vscode/
+.idea/
+*.swp
+*.swo
+*.sublime-workspace
+
+# Archivos específicos de sistemas operativos
+Thumbs.db
+ehthumbs.db
+Desktop.ini
+
+# Archivos de paquetes
+*.tgz
+.myapp
+
+# Archivos generados por MacOS
+.AppleDouble
+.LSOverride
+
+# Icono de la aplicación para MacOS
+.AppleIcon
+
+# Archivos de previsualización en Windows
+Thumbs.db
+ehthumbs.db
+
+# Archivos de caché de la zona de intercambio de archivos en Windows
+$RECYCLE.BIN/
+
+# Archivos de sistema de Windows
+Desktop.ini
