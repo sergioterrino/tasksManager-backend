@@ -22,7 +22,12 @@ export const signup = async (req, res) => {
     console.log("auth.controller signup -> antes del createAccessToken");
     const token = await createAccessToken({ id: savedUser._id }); // generamos token
 
-    res.cookie('token', token);
+    // res.cookie('token', token);
+    res.cookie("token", token, {
+      httpOnly: true,
+      sameSite: 'None', // Necesario para solicitudes cruzadas
+      secure: true // Recomendado para producción con HTTPS
+    });
     console.log('toooooooooken auth.controller signup -> ', token);
     res.json({
       id: savedUser._id,
