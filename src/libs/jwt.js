@@ -1,5 +1,7 @@
 import jwt from 'jsonwebtoken';
-import 'dotenv/config';
+// import 'dotenv/config';
+import dotenv from 'dotenv';
+dotenv.config();
 
 // generamos un token para la auth
 export function createAccessToken(payload) {

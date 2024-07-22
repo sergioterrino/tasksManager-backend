@@ -2,7 +2,9 @@ import User from '../models/user.model.js';
 import bcrypt from 'bcryptjs';
 import jwt from 'jsonwebtoken';
 import { createAccessToken } from '../libs/jwt.js';
-import 'dotenv/config';
+// import 'dotenv/config';
+import dotenv from 'dotenv';
+dotenv.config();
 
 export const signup = async (req, res) => {
   const { username, email, password } = req.body;

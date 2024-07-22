@@ -1,4 +1,3 @@
-
 export const validateSchema = (schema) => (req, res, next) => {
   try {
     schema.parse(req.body); // comparamos el schema con el body que le pasemos en la req

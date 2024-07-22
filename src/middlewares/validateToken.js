@@ -1,5 +1,7 @@
 import jwt from 'jsonwebtoken';
-import 'dotenv/config';
+// import 'dotenv/config';
+import dotenv from 'dotenv';
+dotenv.config();
 
 export const authRequired = (req, res, next) => {
   const { token } = req.cookies;
