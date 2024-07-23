@@ -21,6 +21,7 @@ export const signup = async (req, res) => {
 
     console.log("auth.controller signup -> antes del createAccessToken");
     const token = await createAccessToken({ id: savedUser._id }); // generamos token
+    console.log('toooooooooken auth.controller signup -> ', token);
 
     // res.cookie('token', token);
     res.cookie("token", token, {
@@ -55,6 +56,7 @@ export const login = async (req, res) => {
 
     //create the token
     const token = await createAccessToken({ id: userFound._id });
+    console.log('toooooooooken auth.controller login -> ', token);
     if (token) {
       // res.cookie("token", token);
       res.cookie("token", token, {
