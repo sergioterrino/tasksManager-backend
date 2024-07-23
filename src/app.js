@@ -9,7 +9,7 @@ import cors from 'cors';
 const app = express();
 
 app.use(cors({
-  origin: process.env.CORS_ORIGIN_RENDER, // permito que solo se conecte desde mi front
+  origin: process.env.CORS_ORIGIN, // permito que solo se conecte desde mi front
   credentials: true // xra que permita enviar cookies en la preflight
 }))
 app.use(morgan('dev')); // Esto facilita un log para las requests
