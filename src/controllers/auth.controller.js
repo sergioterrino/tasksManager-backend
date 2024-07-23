@@ -3,8 +3,8 @@ import bcrypt from 'bcryptjs';
 import jwt from 'jsonwebtoken';
 import { createAccessToken } from '../libs/jwt.js';
 // import 'dotenv/config';
-import dotenv from 'dotenv';
-dotenv.config();
+// import dotenv from 'dotenv';
+// dotenv.config();
 
 export const signup = async (req, res) => {
   const { username, email, password } = req.body;
@@ -85,7 +85,8 @@ export const logout = (req, res) => {
 // Cada que la page carga de nuevo se verifica si existe token y si existe user(db) de ese token
 export const verifyToken = async (req, res) => {
   const { token } = req.cookies;
-  console.log('token auth.controller - ', token);
+  console.log('token auth.controller - verifyToken - req.cookies -> ', req.cookies);
+  console.log('token auth.controller - verifyToken - token -> ', token);
   if (!token) return res.status(401).json({ message: "Unauthorized" });
 
   jwt.verify(token, process.env.TOKEN_SECRET, async (error, user) => {
